@@ -1,29 +1,38 @@
-
+# Core data science
 pandas
 numpy
 
+# Visualisation
 matplotlib
 seaborn
+plotly
 
-scikit-learn
+# Machine learning
+scikit-learn==1.8.0
+xgboost
+lightgbm
+imbalanced-learn
+shap
 joblib
 
+# Experiment tracking
 mlflow
 
+# API
 fastapi
 uvicorn
+pydantic
 
+# Dashboard
 streamlit
 
+# Notebook
 jupyter
 ipykernel
 
+# Utilities
 python-dotenv
 tqdm
 
-xgboost
-lightgbm
-shap
-plotly
-imbalanced-learn
+# Testing
 pytest
