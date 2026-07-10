@@ -6,6 +6,11 @@ __pycache__/
 *$py.class
 *.so
 
+# Output files
+output/
+
+
+*.csv
 # ===============================
 # Virtual environments
 # ===============================
@@ -115,9 +120,7 @@ tempCodeRunnerFile.py
 .DS_Store
 Thumbs.db
 
-.csv
-.env
-nova-venv/
-__pycache__/
+# Ignore data, models and generated reports
 data/
-output/
+models/
+reports/
