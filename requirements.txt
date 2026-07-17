@@ -9,7 +9,7 @@ plotly
 
 # Machine learning
 scikit-learn==1.8.0
-xgboost
+xgboost==3.3.0
 lightgbm
 imbalanced-learn
 shap
@@ -20,8 +20,13 @@ mlflow
 
 # API
 fastapi
-uvicorn
+uvicorn[standard]
 pydantic
+pandas
+numpy
+joblib
+scikit-learn==1.8.0
+
 
 # Dashboard
 streamlit

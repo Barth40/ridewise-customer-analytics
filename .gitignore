@@ -1,16 +1,11 @@
 # ===============================
-# Python cache
+# Python cache and compiled files
 # ===============================
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 
-# Output files
-output/
-
-
-*.csv
 # ===============================
 # Virtual environments
 # ===============================
@@ -22,37 +17,47 @@ env.bak/
 venv.bak/
 
 # ===============================
-# Environment variables / secrets
+# Environment variables and secrets
 # ===============================
 .env
 .env.*
 .envrc
 .streamlit/secrets.toml
 
+# Private keys
+*.pem
+*.key
+
 # ===============================
-# Jupyter
+# Jupyter and IPython
 # ===============================
 .ipynb_checkpoints/
 profile_default/
 ipython_config.py
 
 # ===============================
-# Data files - ignored
+# Raw data and generated outputs
 # ===============================
 data/*
 !data/.gitkeep
 
-# ===============================
-# Model artifacts - ignored
-# ===============================
-models/*
-!models/.gitkeep
-
-# ===============================
-# Reports generated outputs - ignored except folder
-# ===============================
+output/
 reports/*
 !reports/.gitkeep
+
+# Ignore CSV datasets
+*.csv
+
+# ===============================
+# Model artifacts
+# ===============================
+# Keep the deployment models required by FastAPI.
+# Ignore other generated model files if necessary.
+
+models/*
+!models/.gitkeep
+!models/churn_prediction_model.pkl
+!models/churn_prediction_threshold.pkl
 
 # ===============================
 # MLflow artifacts
@@ -86,7 +91,7 @@ coverage.xml
 nosetests.xml
 
 # ===============================
-# Build / packaging
+# Build and packaging
 # ===============================
 build/
 dist/
@@ -98,7 +103,7 @@ wheels/
 *.spec
 
 # ===============================
-# Type checking / linting
+# Type checking and linting
 # ===============================
 .mypy_cache/
 .dmypy.json
@@ -108,19 +113,17 @@ dmypy.json
 .ruff_cache/
 
 # ===============================
-# IDE / editor
+# IDE and editors
 # ===============================
 .vscode/
 .idea/
 tempCodeRunnerFile.py
 
 # ===============================
-# OS files
+# Operating-system files
 # ===============================
 .DS_Store
 Thumbs.db
-
-# Ignore data, models and generated reports
 data/
-models/
+deploy/
 reports/
